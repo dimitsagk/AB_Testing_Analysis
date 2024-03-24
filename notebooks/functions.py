@@ -14,6 +14,10 @@ def cleaning(df_clients, df_trace, df_roster):
     # Making a new dataframe with deleted rows that have as values only the client_id
     df_clients = df_clients.dropna(thresh = 8)
 
+
+    ## Dropping duplicated values
+    df_trace = df_trace.drop_duplicates()
+    
     
     ## Filling null values
 
