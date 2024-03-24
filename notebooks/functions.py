@@ -47,3 +47,14 @@ def cleaning(df_clients, df_trace, df_roster):
     return df_clients, df_trace, df_roster, df_clients_with_na
 
 
+def session_id(new_session):
+    ''' Function to define the seperate sessions'''
+    
+    global count  # Access the count variable from outside the function
+    
+    if new_session == True:
+        count += 1
+        return count
+        
+    else:
+        return count
